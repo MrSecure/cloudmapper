@@ -14,6 +14,7 @@ getLogger("policyuniverse").setLevel(CRITICAL)
 KNOWN_BAD_POLICIES = {
     "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM": "Use AmazonSSMManagedInstanceCore instead and add privs as needed",
     "arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource": "Use AmazonMachineLearningRoleforRedshiftDataSourceV3 instead",
+    "arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole": "Use AmazonEC2SpotFleetTaggingRole instead",
 }
 
 
@@ -27,7 +28,7 @@ def action_matches(action_from_policy, actions_to_match_against):
     return False
 
 
-def policy_action_count(policy_doc):
+def policy_action_count(policy_doc, location):
     """Counts how many unrestricted actions a policy grants"""
     policy = Policy(policy_doc)
     actions_count = 0
