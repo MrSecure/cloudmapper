@@ -197,7 +197,7 @@ def find_admins_in_account(
                     )
                 )
 
-        policy_action_counts[policy["Arn"]] = policy_action_count(policy_doc)
+        policy_action_counts[policy["Arn"]] = policy_action_count(policy_doc,location)
 
         if is_admin_policy(
             policy_doc,
