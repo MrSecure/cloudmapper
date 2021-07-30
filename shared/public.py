@@ -1,5 +1,7 @@
 from __future__ import print_function
 
+import json
+import os
 import pyjq
 
 from commands.prepare import build_data_structure
