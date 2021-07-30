@@ -1014,6 +1014,30 @@
         }
     },
     {
+        "selector": "[type = \"saml_generic\"]",
+        "css": {
+            "label": "",
+            "background-opacity": 0,
+            "background-image": "./icons/logos/saml_generic.png",
+            "background-fit": "contain",
+            "background-clip": "none",
+            "width": 150,
+            "height": 100
+        }
+    },
+    {
+        "selector": "[type = \"aws_sso\"]",
+        "css": {
+            "label": "",
+            "background-opacity": 0,
+            "background-image": "./icons/aws/aws_sso.svg",
+            "background-fit": "contain",
+            "background-clip": "none",
+            "width": 64,
+            "height": 64
+        }
+    },
+    {
         "selector": "[type = \"user\"]",
         "css": {
         "background-opacity": 0,
