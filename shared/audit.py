@@ -253,6 +253,7 @@ def audit_iam(findings, region):
                 "config.amazonaws.com",
                 "trustedadvisor.amazonaws.com",
                 "macie.amazonaws.com",
+                "mediaconvert.amazonaws.com",
             ]:
                 continue
 
