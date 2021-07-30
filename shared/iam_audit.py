@@ -286,6 +286,11 @@ def find_admins_in_account(
                     # privileges, so this just causes false positives as the purpose
                     # of this detection rule is to find unexpected admins
                     continue
+                if ':role/AWSControlTowerExecution' in role['Arn']:
+                    # AWS Control Tower creates this role and adds an inline policy to it
+                    # granting full privileges, so this just causes false positives as the
+                    # purpose of this detection rule is to find unexpected admins
+                    continue
 
                 reasons_for_being_admin.append("Custom policy: {}".format(policy["PolicyName"]))
                 findings.add(
